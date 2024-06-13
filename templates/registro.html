@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro</title>
+    <style>
+        body {
+            background-color: deepskyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form-register {
+            width: 350px;
+            background: white;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-register h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            width: 100%;
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid deepskyblue;
+            font-size: 18px;
+            color: black;
+        }
+
+        .form-register .botons {
+            width: 100%;
+            background: dodgerblue;
+            border: none;
+            padding: 12px;
+            color: white;
+            margin: 16px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-register .botons:hover {
+            background-color: #434343;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<body>
+    <section class="form-register">
+        <h4>Formulario Registro</h4>
+        <form action="/registro" method="post">
+            <input class="controls" type="text" name="rfc" id="rfc" placeholder="Ingrese su RFC" required>
+            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre Completo" required>
+            <input class="controls" type="text" name="cedula" id="cedula" placeholder="Ingrese su Cedula Profesional" required>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required>
+            <input class="controls" type="text" name="rol" id="rol" placeholder="Ingrese su Rol" required>
+            <input class="botons" type="submit" value="Registrar Datos">
+        </form>
+    </section>
+</body>
+</html>

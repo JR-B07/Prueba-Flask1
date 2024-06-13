@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Index</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: deepskyblue;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav {
+            width: 100%;
+            background-color: dodgerblue;
+            overflow: hidden;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav ul li {
+            float: left;
+        }
+
+        .nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav ul li a:hover {
+            background-color: #434343;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #434343;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: white;
+        }
+
+        p {
+            margin-top: 10px;
+            color: white;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/registro">Registro</a></li>
+            <li><a href="/consulta">Consulta</a></li>
+            <li><a href="/actualizar">Actualizar Datos</a></li>
+            <li><a href="/eliminar">Eliminar Datos</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Bienvenido al Sistema</h1>
+        <p>Hola, Médico. Bienvenido al sistema de gestión de pacientes.</p>
+        <a href="/registro" class="btn">Ir a Registro</a>
+    </div>
+
+</body>
+</html>
